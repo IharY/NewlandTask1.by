@@ -66,8 +66,29 @@ include('includes/db.php');
         </section>
         <section class="table_filters">
             <div class="container table_filters_wrapper">
-                <form method = "POST" action = "index.php">
+                <form method = "GET" action = "index.php">
+                    <div class="select_filters_wrap">
+                        <div class="select_filters_place">
+                        <select id = "select_sorting" name="select_sorting" required>
+                            <option selected disabled>Sort</option>
+                            <option value="date_time">date</option>
+                            <option value="sum">money amount</option>
+                        </select>
+
+                        </div>
+                        
+                        <div class="select_filters_place">
+                        <select id = "select_filter" name="select_filter" required>
+                            <option selected disabled>Filter </option>
+                        </select>
+
+                        </div>
+                        
+                    </div>
                     
+                    <div class = "form_group">
+                        <input class="submit_button" id = "submit_button" type="submit" value="Submit">
+                    </div>
                 </form>
             </div>
         </section>
@@ -106,7 +127,7 @@ include('includes/db.php');
             $select_category_v = $_POST['select_category'];
             $sum_v = $_POST['sum'];
             $comment_v = $_POST['comment'];
-
+            
             // echo '$_POST['data']';
             // $sql = "INSERT INTO `money_count` (`date_time`, `transaction_type`, `category`, `sum`, `comment`) VALUES ($date_v, $select_transaction_v, $select_category_v, $sum_v, $comment_v)";
             $sql = "INSERT INTO `money_count` (`id`, `date_time`, `transaction_type`, `category`, `sum`, `comment`) VALUES ($date_v, $select_transaction_v, $select_category_v, $sum_v, $comment_v)";
