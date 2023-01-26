@@ -74,14 +74,12 @@ include('includes/db.php');
                             <option value="date_time">date</option>
                             <option value="sum">money amount</option>
                         </select>
-
                         </div>
                         
                         <div class="select_filters_place">
                         <select id = "select_filter" name="select_filter" required>
                             <option selected disabled>Filter </option>
                         </select>
-
                         </div>
                         
                     </div>
@@ -111,18 +109,12 @@ include('includes/db.php');
                     }
                 } else{
                     echo 'we have no notes in db';
-                } 
-            
+                }
             // $data = $_POST['date'];
             // echo $data;
-            print_r($_POST);
-
-            
-
             // $connection->exec("set names utf8");
             // $date_v = $_POST['date_time'];
             $data_v = $_POST['date_time'];
-            // echo $data_v;
             $select_transaction_v = $_POST['select_transaction'];
             $select_category_v = $_POST['select_category'];
             $sum_v = $_POST['sum'];
@@ -143,9 +135,9 @@ include('includes/db.php');
                     //echo 'Apparently you mixed up the transaction type and category, please try again';
                 //}
             if (mysqli_query($connection, $sql) == true) {
-                echo 'hi, work';    
+                echo 'yes';    
             } else{
-                echo 'hi, hfhdhjsdjhsdhsdhds';
+                echo 'no';
             }
             ?>
         </div>
