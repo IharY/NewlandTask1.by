@@ -5,6 +5,6 @@
      echo mysqli_connect_error();
      exit();
  } 
-
- $result = mysqli_query($connection, "SELECT * FROM `articles_categories`")
+ $all_notes = mysqli_query ($connection,"SELECT * FROM `money_count`");
+//  $result = mysqli_query($connection, "SELECT * FROM `articles_categories`")
 ?>
